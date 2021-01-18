@@ -32,7 +32,7 @@ public class Agenda {
 		do {
 			System.out.println("Agenda telefonos 2.0 \n -------------- \n");
 			System.out.println("1- Ver todos los contactos");
-			System.out.println("2- Añadir contacto");
+			System.out.println("2- AÃ±adir contacto");
 			System.out.println("3- Borrar contacto");
 			System.out.println("4- Buscar contacto");
 			System.out.println("5- Editar contacto");
@@ -45,7 +45,7 @@ public class Agenda {
 			}
 			
 			if (opc < 1 || opc > 6) {
-				System.out.println("Opción no válida \n\n");
+				System.out.println("Opcion no valida \n\n");
 			}
 		} while (opc < 1 || opc > 6);
 		return opc;
@@ -68,7 +68,7 @@ public class Agenda {
 		return propietario + "\n" + contactos;
 	}
 	
-	//Busqueda de posición libre
+	//Busqueda de posicion libre
 	private int buscarPosicion() {
 		for (int i = 0; i < vAgenda.length; i++) {
 			if (vAgenda[i] == null) {
@@ -96,7 +96,7 @@ public class Agenda {
 		int pos;
 		
 		try {
-			System.out.println("Añadiendo un nuevo contacto");
+			System.out.println("AÃ±adiendo un nuevo contacto");
 			System.out.println("Dime el nombre del contacto");
 			nombre = leer.nextLine();
 			System.out.println("Dime el telefono del contacto");
@@ -105,11 +105,11 @@ public class Agenda {
 			Contacto c = new Contacto(nombre, telefono);
 			pos = buscarPosicion();
 			vAgenda[pos] = c;
-			System.out.println("Contacto añadido");
+			System.out.println("Contacto aÃ±adido");
 		} catch (java.lang.ArrayIndexOutOfBoundsException e) {
 			System.out.println("Tu agenda esta llena");
 		} catch (Exception e) {
-			System.out.println("El contacto no se ha podido añadir");
+			System.out.println("El contacto no se ha podido aÃ±adir");
 		}
 		
 	}
